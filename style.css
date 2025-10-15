@@ -16,10 +16,9 @@
 }
 
 body {
-  /*background-color: transparent;  Transparent background */
+  background-color: transparent;  /* Transparent background */
   
-  /*transition: all 0.5s ease;*/
-  background-color: #ff0000; /* Transparent background */
+  transition: all 0.5s ease;
 }
 
 body.dark {
@@ -332,6 +331,7 @@ body.dark {
 .change-theme {
   display: none !important;
 }
+
 
 
 
