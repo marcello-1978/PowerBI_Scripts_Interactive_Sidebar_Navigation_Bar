@@ -6,365 +6,58 @@
     <!-- Boxicons CSS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <title>Interactive Sidebar – Report Navigation</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+	/* Simple horizontal menu */
+#customMenu {
+  display: flex;
+  justify-content: center;
+  background-color: #1f1f1f;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+#customMenu a {
+  color: gold;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+#customMenu a:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+}
+</style>
+
   </head>
   <body>
-    <!-- navbar -->
-    <nav class="navbar">
-      <div class="logo_item">
-        <i class="bx bx-menu" id="sidebarOpen"></i>
-      </div>
+ <div id="customMenu">
+  <a href="#" data-page="Page 1">Home</a>
+  <a href="#" data-page="Page 2">Reports</a>
+  <a href="#" data-page="Page 3">Insights</a>
+</div>
 
-      <div class="search_bar">
-        <input type="text" placeholder="Search" />
-      </div>
-
-      <div class="navbar_content">
-        <i class="bi bi-grid"></i>
-        <i class='bx bx-sun' id="darkLight"></i>
-      </div>
-    </nav>
-
-    <!-- sidebar -->
-    <nav class="sidebar">
-      <div class="menu_content">
-        <ul class="menu_items">
-          <div class="menu_title menu_dahsboard"></div>
-          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
-          <!-- start -->
-          <li class="item">
-            <div href="#" class="nav_link submenu_item">
-              <span class="navlink_icon">
-                <i class="bx bx-home-alt"></i>
-              </span>
-              <span class="navlink">Home</span>
-             <!-- <i class="bx bx-chevron-right arrow-left"></i> -->
-            </div>
-
-            <!--<ul class="menu_items submenu">
-              <!--<a href="#" class="nav_link sublink" data-page="Page 22">Homepage</a> 
-              <a href="#" class="nav_link sublink" data-page="Page 22">Welcome Message</a>
-             <a href="#" class="nav_link sublink" data-page="Page 22">Page 22</a>
-             <a href="#" class="nav_link sublink" data-page="Page 22">Page 22</a>
-            </ul>-->
-          </li>
-          <!-- end -->
-
-          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
-          <!-- start -->
-          <li class="item">
-            <div href="#" class="nav_link submenu_item">
-              <span class="navlink_icon">
-                <i class="bx bx-grid-alt"></i>
-              </span>
-              <span class="navlink">Overview</span>
-              <!-- <i class="bx bx-chevron-right arrow-left"></i> -->
-            </div>
-
-           <!-- <ul class="menu_items submenu">
-              <a href="#" class="nav_link sublink" data-page="Page 22">General Statistics</a>
-            </ul> -->
-          </li>
-          <!-- end -->
-        </ul>
-<!------------- Navigation ---------------->
-        <ul class="menu_items">
-          <div class="menu_title menu_editor"></div>
-          <!-- duplicate these li tag if you want to add or remove navlink only -->
-          <!-- Start -->
-  <!-- • Table of Contents -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Table of Contents</span>
-    </a>
-  </li>
-
-  <!-- • Welcome Message -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Welcome Message</span>
-    </a>
-  </li>
-          
-  <!-- • Page 1 – Medical Health -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 1 – Medical Health</span>
-    </a>
-  </li>
-
-  <!-- • Page 2 – Medical Health Recommendations -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 2 – Medical Health Recommendations</span>
-    </a>
-  </li>
-
-  <!-- • Page 3 – Eating Habits -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 3 – Eating Habits</span>
-    </a>
-  </li>
-
-  <!-- • Page 4 – Eating Habits -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 4 – Eating Habits</span>
-    </a>
-  </li>
-
-  <!-- • Page 5 – Eating Habits Recommendation -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 5 – Eating Habits Recommendation</span>
-    </a>
-  </li>
-
-  <!-- • Page 6 – Physical Activity -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 6 – Physical Activity</span>
-    </a>
-  </li>
-
-  <!-- • Page 7 – Physical Activity Recommendation -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 7 – Physical Activity Recommendation</span>
-    </a>
-  </li>
-
-  <!-- • Page 8 – Smoking -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 8 – Smoking</span>
-    </a>
-  </li>
-
-  <!-- • Page 9 – Smoking Recommendation -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 9 – Smoking Recommendation</span>
-    </a>
-  </li>
-
-  <!-- • Page 10 – Sleep -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 10 – Sleep</span>
-    </a>
-  </li>
-
-  <!-- • Page 11 – Sleep Recommendation -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 11 – Sleep Recommendation</span>
-    </a>
-  </li>
-
-  <!-- • Page 12 – Mental Health -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 12 – Mental Health</span>
-    </a>
-  </li>
-
-  <!-- • Page 13 – Mental Health Recommendation -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 13 – Mental Health Recommendation</span>
-    </a>
-  </li>
-
-  <!-- • Page 14 – Worklife Balance Practices -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 14 – Worklife Balance Practices</span>
-    </a>
-  </li>
-
-  <!-- • Page 15 – Worklife Balance Practices Recommendation -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 15 – Worklife Balance Practices Recommendation</span>
-    </a>
-  </li>
-
-  <!-- • Page 16 – Finances -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 16 – Finances</span>
-    </a>
-  </li>
-
-  <!-- • Page 17 – Finances Recommendation -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 17 – Finances Recommendation</span>
-    </a>
-  </li>
-
-  <!-- • Page 18 – Organizational Practices -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 18 – Organizational Practices</span>
-    </a>
-  </li>
-
-  <!-- • Page 19 – Organizational Practices Recommendation -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 19 – Organizational Practices Recommendation</span>
-    </a>
-  </li>
-
-  <!-- • Page 20 – Work Environment -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 20 – Work Environment</span>
-    </a>
-  </li>
-
-  <!-- • Page 21 – Work Environment Recommendations -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 21 – Work Environment Recommendations</span>
-    </a>
-  </li>
-
-  <!-- • Page 22 – Family Situation -->
-  <li class="item">
-    <a href="#" class="nav_link">
-      <span class="navlink_icon">
-        <i class="bx bx-layer"></i>
-      </span>
-      <span class="navlink">Page 22 – Family Situation</span>
-    </a>
-  </li>
-</ul>       
-<!-- ===== Setting Section ===== -->        
-        <!-- <ul class="menu_items">
-          <div class="menu_title menu_setting"></div>
-          <li class="item">
-            <a href="#" class="nav_link">
-              <span class="navlink_icon">
-                <i class="bx bx-flag"></i>
-              </span>
-              <span class="navlink">Notice board</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="nav_link">
-              <span class="navlink_icon">
-                <i class="bx bx-medal"></i>
-              </span>
-              <span class="navlink">Award</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="nav_link">
-              <span class="navlink_icon">
-                <i class="bx bx-cog"></i>
-              </span>
-              <span class="navlink">Setting</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#" class="nav_link">
-              <span class="navlink_icon">
-                <i class="bx bx-layer"></i>
-              </span>
-              <span class="navlink">Features</span>
-            </a>
-          </li>
-        </ul> -->
-
-        <!-- Sidebar Open / Close -->
-        <div class="bottom_content">
-          <div class="bottom expand_sidebar">
-            <span> Expand</span>
-            <i class='bx bx-log-in' ></i>
-          </div>
-          <div class="bottom collapse_sidebar">
-            <span> Collapse</span>
-            <i class='bx bx-log-out'></i>
-          </div>
-        </div>
-      </div>
-    </nav>
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script>
+	
+	$(document).ready(function () {
+  $('#customMenu a').on('click', function (e) {
+    e.preventDefault();
+    const targetPage = $(this).data('page');
+
+    // Power BI page navigation
+    if (window.powerbi) {
+      const report = powerbi.get('report');
+      report.navigateToPage(targetPage)
+        .catch(err => console.error('Navigation error:', err));
+    } else {
+      console.warn('Power BI API not available');
+    }
+  });
+});
+	
+	
+	</script>
   </body>
 </html>
-
-
