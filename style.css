@@ -19,7 +19,7 @@ body {
   /*background-color: transparent;  Transparent background */
   
   /*transition: all 0.5s ease;*/
-  background-color: #cccccc; /* Transparent background */
+  background-color: #ff0000; /* Transparent background */
 }
 
 body.dark {
@@ -332,5 +332,6 @@ body.dark {
 .change-theme {
   display: none !important;
 }
+
 
 
